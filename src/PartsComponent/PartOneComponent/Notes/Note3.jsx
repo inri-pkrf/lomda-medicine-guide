@@ -101,14 +101,13 @@ const Note3 = ({ onClose }) => {
         })}
       </div>
 
-      {allCardsViewed && (
         <div className="buttons-bar-note3">
           <div className="btn-text btn-text-end" onClick={onClose}>
             <div className="img-arrow img-arrow-end" />
             <div className="text-label">סיום</div>
           </div>
         </div>
-      )}
+        
     </div>
   );
 };

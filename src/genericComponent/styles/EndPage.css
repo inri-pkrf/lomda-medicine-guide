@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
+
+.endpage-fullscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #d0e8ff);
+  color: #1e1e2f;
+  text-align: center;
+  padding: 0rem;
+  font-family: 'Assistant', sans-serif;
+  direction: rtl;
+  gap: 1rem;
+}
+
+.endpage-fullscreen h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f5783;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  animation: popIn 0.6s ease;
+}
+
+.endpage-fullscreen p {
+  font-size: 3.4rem;
+  color: #333;
+}
+
+.endpage-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 4.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-endpage {
+  background: linear-gradient(135deg, #24779b, #3bb2e2);
+  border: none;
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Assistant', sans-serif;
+}
+
+.btn-endpage:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

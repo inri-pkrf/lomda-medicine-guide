@@ -184,14 +184,13 @@ const Note5 = ({ onClose }) => {
       </div>
 
 
-      {allViewed && (
         <div className="buttons-bar-note5">
           <div className="btn-text btn-text-end" onClick={onClose}>
             <div className="img-arrow img-arrow-end" />
             <div className="text-label">סיום</div>
           </div>
         </div>
-      )}
+        
     </div>
   );
 };

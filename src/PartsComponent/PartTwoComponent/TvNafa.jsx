@@ -118,12 +118,12 @@ const TvNafa = ({ onFinish, onClose }) => {
 
   return (
     <div className="TvNafa">
-       <img
-          className="closeBtn-mahoz"
-          src={`${process.env.PUBLIC_URL}/Assets/Btns/closeWhite.png`}
-          alt="corkboard"
-          onClick={onClose}
-        />
+      <img
+        className="closeBtn-mahoz"
+        src={`${process.env.PUBLIC_URL}/Assets/Btns/closeWhite.png`}
+        alt="corkboard"
+        onClick={onClose}
+      />
       <img
         className="Tv-img-nafa"
         src={`${process.env.PUBLIC_URL}/Assets/PartTwoImgs/warRoomTv.png`}
@@ -242,37 +242,34 @@ const TvNafa = ({ onFinish, onClose }) => {
 
 
       {/* כפתורי ניווט + סיום */}
-      {(step > 0 || showContinue) && (
-        <div className="buttons-bar">
+      <div className="buttons-bar">
+        <div
+          className="btn-text btn-text-prev"
+          style={{ visibility: step > 0 ? 'visible' : 'hidden' }}
+          onClick={() => setStep(prev => Math.max(prev - 1, 0))}
+        >
+          <div className="img-arrow" />
+          <div className="text-label">הקודם</div>
+        </div>
+
+        {step < totalSteps ? (
           <div
-            className="btn-text btn-text-prev"
-            style={{ visibility: step > 0 ? 'visible' : 'hidden' }}
-            onClick={() => setStep(prev => Math.max(prev - 1, 0))}
+            className="btn-text btn-text-next"
+            onClick={() => setStep((prev) => Math.min(prev + 1, totalSteps))}
           >
             <div className="img-arrow" />
-            <div className="text-label">הקודם</div>
+            <div className="text-label">המשך</div>
           </div>
-
-
-          {step < totalSteps ? (
-            <div
-              className="btn-text btn-text-next"
-              onClick={() => setStep((prev) => Math.min(prev + 1, totalSteps))}
-            >
-              <div className="img-arrow" />
-              <div className="text-label">המשך</div>
-            </div>
-          ) : canFinish && (
-            <div
-              className="btn-text btn-text-end"
-              onClick={handleFinish}
-            >
-              <div className="img-arrow" />
-              <div className="text-label">סיום</div>
-            </div>
-          )}
-        </div>
-      )}
+        ) : (
+          <div
+            className="btn-text btn-text-end"
+            onClick={handleFinish}
+          >
+            <div className="img-arrow" />
+            <div className="text-label">סיום</div>
+          </div>
+        )}
+      </div>
 
 
       <PopUp

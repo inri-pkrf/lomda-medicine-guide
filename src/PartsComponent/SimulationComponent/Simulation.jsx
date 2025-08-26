@@ -6,6 +6,7 @@ import NavigationButtons from '../../genericComponent/NavigationButtons';
 const Simulation = ({ onFinishSimulation }) => {
   const chatRef = useRef(null);
   const messagesEndRef = useRef(null);
+  const [showEndButton, setShowEndButton] = useState(false);
 
   // האם המשתמש התחיל אי פעם? (נשמר בסשן)
   const [simulationStarted, setSimulationStarted] = useState(() => {
@@ -26,6 +27,13 @@ const Simulation = ({ onFinishSimulation }) => {
 
   // האם ההודעה הראשונה כבר נפתחה פעם אחת
   const [firstMessageShown, setFirstMessageShown] = useState(false);
+
+  useEffect(() => {
+    if (!showIntroScreen) {
+      setShowEndButton(true); // עכשיו כפתור "סיום" מופיע
+    }
+  }, [showIntroScreen]);
+
 
   const filteredMessages = simulationData.messages.filter(msg => msg.type !== "התחלה");
   const messagesToShow = filteredMessages.slice(0, currentIndex + 1);
@@ -160,7 +168,11 @@ const Simulation = ({ onFinishSimulation }) => {
         </div>
       )}
 
-      <NavigationButtons showNext={false} />
+      <NavigationButtons
+        showNext={!showIntroScreen}
+        allowNext={true}
+        simulationStarted={showEndButton}
+      />
     </div>
   );
 };

@@ -11,20 +11,19 @@ const steps = [
     { id: 6, title: 'יחסי גומלין', path: '/part-four' },
     { id: 7, title: 'שאלה', path: '/questions/FOUR' },
     { id: 8, title: 'סימולציה', path: '/simulation' },
+    { id: 9, title: 'עמוד סיום', path: '/endPage' },
 ];
 
-const NavigationButtons = ({ showNext = true, allowNext = true, endShownKey = null }) => {
+const NavigationButtons = ({ showNext = true, allowNext = true, simulationStarted = false }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
     const currentIndex = steps.findIndex(step => step.path === location.pathname);
     const prevStep = currentIndex > 0 ? steps[currentIndex - 1] : null;
     const nextStep = currentIndex < steps.length - 1 ? steps[currentIndex + 1] : null;
-
     const defaultPrevPath = '/part-zero';
 
-    // אם הועבר key, בודקים ב-sessionStorage אם ההסבר הסופי הוצג
-    const canShowNext = endShownKey ? sessionStorage.getItem(endShownKey) === "true" : true;
+    const isSimulation = location.pathname === '/simulation';
 
     return (
         <div className="navigation-buttons">
@@ -35,9 +34,18 @@ const NavigationButtons = ({ showNext = true, allowNext = true, endShownKey = nu
                 → הקודם
             </button>
 
-            {showNext && nextStep && allowNext && canShowNext && (
-                <button className="btn-nav next" onClick={() => navigate(nextStep.path)}>
-                    המשך ←
+            {showNext && allowNext && (
+                <button
+                    className="btn-nav next"
+                    onClick={() =>
+                        isSimulation && simulationStarted
+                            ? navigate('/endPage')   // כפתור סיום בלחיצה
+                            : nextStep
+                                ? navigate(nextStep.path)
+                                : null
+                    }
+                >
+                    {isSimulation && simulationStarted ? 'סיום הסימולציה ←' : 'המשך ←'}
                 </button>
             )}
         </div>

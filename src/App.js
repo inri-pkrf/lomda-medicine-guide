@@ -11,12 +11,13 @@ import PartTwo from './PartsComponent/PartTwoComponent/PartTwo';
 import PartThree from './PartsComponent/PartThreeComponent/PartThree';
 import PartFour from './PartsComponent/PartFourComponent/PartFour';
 import Simulation from './PartsComponent/SimulationComponent/Simulation';
+import EndPage from './genericComponent/EndPage';
 
 const SimulationWrapper = () => {
   const navigate = useNavigate();
 
   const handleFinishSimulation = () => {
-    navigate('/', { state: { fromSimulation: true } });
+    navigate('/endPage');
   };
 
   return <Simulation onFinishSimulation={handleFinishSimulation} />;
@@ -63,6 +64,7 @@ function App() {
         <Route path="part-three" element={<PartThree setHideNavBar={setHideNavBar} />} />
         <Route path="part-four" element={<PartFour setHideNavBar={setHideNavBar} />} />
         <Route path="simulation" element={<SimulationWrapper />} />
+        <Route path="endPage" element={<EndPage />} />
         <Route path="/questions/:chapter" element={<Questions />} />
       </Routes>
     </div>

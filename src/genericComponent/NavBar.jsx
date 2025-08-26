@@ -43,7 +43,7 @@ const NavBar = ({ hideNavBar }) => {
     }
   };
 
-  if (location.pathname === '/' || location.pathname === '/part-zero') {
+if (location.pathname === '/' || location.pathname === '/part-zero' || location.pathname === '/endPage') {
     return null;
   }
 
