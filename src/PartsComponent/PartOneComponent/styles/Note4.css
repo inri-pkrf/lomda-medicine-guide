@@ -1,0 +1,92 @@
+#tape4-one {
+    right: 10vw;
+    top: 4.6vh;
+    width: 11.8vw;
+}
+
+#tape4-two {
+    right: 79vw;
+    top: 79.6vh;
+    width: 11.8vw;
+}
+.Note4 .title-notes{
+    z-index: 45;
+}
+
+
+.Mivzait {
+       position: absolute;
+    height: auto;
+    width: 65%;
+    right: 50%;
+    transform: translateX(50%);
+    top: 19vh;
+    z-index: 20;
+}
+.maaneMishpati {
+       position: absolute;
+    height: auto;
+    width: 65%;
+    right: 50%;
+    transform: translateX(50%);
+    top: 23vh;
+    z-index: 20;
+}
+.maaneMivzaim{
+    position: absolute;
+    height: auto;
+    width: 41%;
+    right: 43%;
+    transform: translateX(50%);
+    top: 27vh;
+    z-index: 20;
+}
+
+/* כפתור סיום */
+.buttons-bar-note4 {
+   z-index: 25;
+    position: relative;
+    top: 79vh;
+    left: 18vw;
+}
+.Note4 .buttons-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
+  position: absolute;
+  width: 65vw;
+  top: 82vh;
+  left: 18vw;
+  direction: rtl;
+  gap: 8vw;
+  z-index: 1000;
+}
+
+
+
+.Note4 
+.note4-content {
+  position: relative;
+  z-index: 20;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+}
+
+.fade-note4-right {
+  animation-name: fadeSlideRight;
+}
+
+.fade-note4-left {
+  animation-name: fadeSlideLeft;
+}
+
+@keyframes fadeSlideRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeSlideLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}

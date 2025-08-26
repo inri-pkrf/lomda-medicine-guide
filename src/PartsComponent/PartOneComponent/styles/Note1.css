@@ -1,0 +1,101 @@
+.tapes {
+    z-index: 20;
+    position: absolute;
+}
+
+.tape1 {
+    right: 16vw;
+    top: 3vh;
+    width: 17vw;
+}
+
+.title-notes {
+    position: absolute;
+    top: 18vh;
+    right: 17vw;
+    font-family: 'Assistant', sans-serif;
+    font-size: 4vmin;
+    color: #595959;
+    font-weight: bold;
+    z-index: 20;
+}
+
+.hats-containr {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 30vh;
+    gap: 1vw;
+    direction: rtl;
+    z-index: 20;
+    position: relative;
+}
+
+.blue-div,
+.green-div,
+.orange-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
+    position: relative;
+}
+
+.hat-title {
+    font-size: 3.5vmin;
+    font-weight: bold;
+    transform: rotate(-10deg);
+    margin-bottom: 3vh;
+    z-index: 10;
+    font-family: 'Assistant', sans-serif;
+}
+
+.blue-title {
+    color: #2e437b;
+}
+
+.green-title {
+    color: #566a21;
+}
+
+.orange-title {
+    color: #e87e39;
+}
+
+.htsImgs {
+    width: 100%;
+    height: auto;
+    max-width: 10vw;
+}
+
+.hat-subText {
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 3vmin;
+    color: #000;
+    line-height: 1.5;
+    font-family: 'Assistant', sans-serif;
+}
+
+.orange-subText {
+    width: 25vw;
+}
+
+.blue-subText {
+    width: 15vw;
+}
+
+.green-subText {
+    width: 5vw;
+}
+
+.buttons-bar-note1 {
+    z-index: 20;
+    position: relative;
+    top: 10vh;
+    left: 16vw;
+}
+
+.Note1 .img-arrow {
+    background-image: url('/public/Assets/Btns/arrowFullBlack.png');
+}

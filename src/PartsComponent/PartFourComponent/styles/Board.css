@@ -1,0 +1,115 @@
+.board {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #feeedf;
+  direction: rtl;
+  opacity: 0;
+  transform: scale(0.98);
+  animation: boardFadeIn 0.4s ease forwards;
+  z-index: 100;
+}
+
+@keyframes boardFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.board-exit {
+  animation: boardFadeOut 0.4s ease forwards;
+}
+
+@keyframes boardFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}
+
+
+.board-img {
+    position: absolute;
+    width: 86%;
+    right: 50%;
+    transform: translateX(50%);
+    top: 6vh;
+}
+
+.board-title {
+    font-size: 5vmin;
+    font-weight: 800;
+    z-index: 100;
+    position: relative;
+    margin: 130px auto 30px auto;
+    max-width: 600px;
+    border-bottom: 4px solid #4e4d48;
+    padding-bottom: 12px;
+    text-align: center;
+    color: #4a3e1a;
+    letter-spacing: 1.2px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    font-family: 'Assistant', sans-serif;
+}
+
+.board-sections-container {
+  display: flex;
+  justify-content: center; 
+  gap: 20px; 
+  margin-bottom: 30px;
+}
+
+.board-section {
+  width: 36%; 
+  padding: 13px 20px 17px 20px;
+  background: #ffffff7a;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(129, 129, 129, 0.3);
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.board-subtitle {
+    font-size: 3vmin;
+    font-weight: 900;
+    margin-bottom: 16px;
+    color: #666666;
+    text-align: right;
+    text-shadow: none;
+    font-family: 'Assistant', sans-serif;
+    cursor: default;
+}
+
+.board-list {
+    list-style-type: disc;
+    padding-right: 30px;
+    margin: 0;
+    line-height: 2;
+    color: #3b3b3b;
+    font-size: 2.5vmin;
+    text-align: right;
+    font-family: 'Assistant', sans-serif;
+    cursor: default;
+}
+
+.board-list li {
+    margin-bottom: 8px;
+}
+
+.buttons-bar-board {
+     z-index: 20;
+    position: absolute;
+    right: 86vw;
+    bottom: 10vh;
+}

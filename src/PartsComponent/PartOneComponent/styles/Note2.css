@@ -1,0 +1,54 @@
+.tape2 {
+    right: 61vw;
+    top: 4vh;
+    width: 17vw;
+}
+
+.imgsNote2-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 2vw;
+    position: absolute;
+    z-index: 20;
+    top: 27vh;
+    width: 55vw;
+    right: 50%;
+    transform: translateX(50%);
+    direction: rtl;
+}
+
+.note2-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.note2-title {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 2vh;
+    font-size: 3vmin;
+    color: #222;
+    font-family: 'Assistant', sans-serif;
+}
+
+.note2-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    display: block;
+    object-fit: contain;
+    margin-bottom: 3vh;
+}
+
+.buttons-bar-note2 {
+    z-index: 20;
+    position: relative;
+    top: 83vh;
+    left: 15vw;
+}
+
+.Note2 .img-arrow {
+    background-image: url('/public/Assets/Btns/arrowFullBlack.png');
+}

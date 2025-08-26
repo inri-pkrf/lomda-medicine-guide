@@ -1,0 +1,339 @@
+.fullscreen-prompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #cc675063;*/
+    background-image: url("/public/Assets/intro/welcome-back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    font-family: 'Assistant', sans-serif;
+    text-align: center;
+}
+
+.i-logo {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    width: 3%;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.i-logo:hover {
+    transform: scale(1.05);
+}
+
+.info-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.xbtn {
+    z-index: 3000;
+    width: 2vw;
+    position: absolute;
+    top: 24vh;
+    right: 69vw;
+    cursor: pointer;
+}
+
+.info-text {
+    width: 40vw;
+    height: 50vh;
+    border-radius: 3rem;
+    position: absolute;
+    bottom: 19vh;
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), inset 0 0 4px rgba(255, 255, 255, 0.5);
+    padding: 6vh 4vw;
+    direction: rtl;
+    font-size: 2.6vmin;
+    font-family: 'Assistant', sans-serif;
+    text-align: center;
+    color: #2e2e2e;
+    border: 1px solid #e0e0e0;
+    color: black;
+    transition: all 0.3s ease;
+    background-image: url("/public/Assets/intro/info-back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.4s ease-in forwards;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.85) translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(50%);
+    }
+}
+
+@keyframes popOut {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateX(50%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.85) translateX(50%);
+    }
+}
+
+.pop-in {
+    animation: popIn 0.4s ease-out forwards;
+}
+
+.pop-out {
+    animation: popOut 0.4s ease-in forwards;
+}
+
+.prompt-text {
+    direction: rtl;
+    background: #ffffff59;
+    padding: 10vh 10vw;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    font-size: 5.5vmin;
+    color: black;
+}
+
+.btn-go {
+    margin-top: 3vh;
+    padding: 2vh 4vw;
+    color: black;
+    background: linear-gradient(135deg, #b6d8e7, #74b0cc);
+    border: none;
+    border-radius: 50vh;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 5.5vmin;
+    font-family: 'Assistant', sans-serif;
+    box-shadow: 0 4px 12px rgba(0, 160, 220, 0.2);
+}
+
+.btn-go:hover {
+    background: linear-gradient(135deg, #334f5c, #488cb1);
+    box-shadow: 0 6px 16px rgba(0, 140, 200, 0.3);
+    color: white;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.video-intro {
+    height: 100%;
+    width: 100%;
+}
+
+.video-section {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s ease-out;
+    opacity: 1;
+    overflow: hidden;
+    z-index: 20000;
+}
+
+.video-section.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.skip {
+    position: absolute;
+    top: 6%;
+    left: 2%;
+    background-color: transparent;
+    font-family: 'Assistant', sans-serif;
+    font-size: 3vmin;
+    color: black;
+    z-index: 9999999;
+    border: none;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------------- */
+
+.intro-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/public/Assets/PartZeroImgs/BackgroundIntro.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    animation: fade-in-intro 0.7s ease-out forwards;
+    opacity: 0;
+}
+
+.clouds {
+    position: absolute;
+    bottom: 6rem;
+    left: 5vw;
+    width: 88%;
+    animation: moveClouds 5s ease-in-out infinite alternate;
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translateX(60px);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+.hospital {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-48%);
+    width: 95%;
+    z-index: 2;
+}
+
+.ambulance {
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+    z-index: 3;
+    animation: driveAmbulance 2.5s ease-out forwards;
+}
+
+@keyframes driveAmbulance {
+    0% {
+        left: 100%;
+    }
+
+
+    100% {
+        left: 3%;
+    }
+}
+
+.text-area {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 4;
+}
+
+.lomda-title {
+    font-size: 10vmin;
+    color: #454545;
+    margin-bottom: 3vh;
+    font-family: 'Karantina', cursive;
+}
+
+.btn-start {
+    font-size: 5vmin;
+    font-family: 'Karantina', cursive;
+    padding: 0.7vh 6vw;
+    border-radius: 50vh;
+    background-color: #cc6650;
+    color: white;
+    border: white 0.3vh solid;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-start:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fade-in-intro {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* -------------------------------------------------------------- */
+
+
+.intro-section.exit .clouds,
+.intro-section.exit .hospital,
+.intro-section.exit .text-area {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes scaleAmbulance {
+    0% {
+        left: 3%;
+        width: 25%;
+        transform: none;
+    }
+
+    100% {
+        left: 5%;
+        width: 90vw;
+    }
+}
+
+.intro-section.exit .ambulance {
+    animation: scaleAmbulance 1s ease-in-out forwards;
+}

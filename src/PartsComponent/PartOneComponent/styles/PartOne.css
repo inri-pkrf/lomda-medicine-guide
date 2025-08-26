@@ -1,0 +1,196 @@
+.PartOne {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    background-color: #f0dcbc;
+    background-image: url("/public/Assets/PartOneImgs/classroom.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.Tomer-one {
+    position: absolute;
+    bottom: 0;
+    left: 80vw;
+    width: 23vw;
+    height: auto;
+    z-index: 3;
+    transition: opacity 0.4s ease;
+}
+
+.fade-in-one {
+    opacity: 1 !important;
+    transition: opacity 0.5s ease;
+}
+
+.Tomer-one {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.PartOne .corkboard.zoomed~.Tomer-one {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.corkboard {
+    position: absolute;
+    bottom: 12vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: auto;
+    z-index: 2;
+    transition: all 0.6s ease-in-out;
+}
+
+.corkboard.zoomed {
+    width: 85vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0vh;
+}
+
+.note-wrapper {
+    position: absolute;
+    width: 13vw;
+    height: 12vw;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    right: 5vw;
+    transition: transform 0.2s ease;
+}
+
+.note-wrapper.fade-in-one {
+    opacity: 1;
+}
+
+.note-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.note-wrapper.grayscale img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.note-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8vmin;
+    color: #595959;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Assistant', sans-serif;
+}
+
+#note1 {
+    top: 15vh;
+    left: 67vw;
+}
+
+#note2 {
+    top: 15vh;
+    left: 43vw;
+}
+
+#note3 {
+    top: 15vh;
+    right: 65vw;
+}
+
+#note4 {
+     top: 54vh;
+    left: 25vw;
+}
+
+#note5 {
+    top: 57vh;
+    right: 20vw;
+}
+
+#note6 {
+  top: 47vh;
+    left: 45vw;
+}
+
+#note7 {
+    top: 50vh;
+    left: 22vw;
+}
+
+.notes {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.above-corkboard-box {
+    position: absolute;
+    top: 9vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 74vw;
+    height: 84vh;
+    background-color: white;
+    z-index: 20;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fade-in-one 0.4s ease-out forwards;
+}
+
+@keyframes fade-in-one {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10rem;
+    left: 25rem;
+    z-index: 101;
+    font-size: 1.5rem;
+    background-color: #ccc;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.1);
+    /* טיפת צבע */
+    z-index: 2;
+    /* מאחורי הלוח */
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.blur-overlay.active {
+    opacity: 1;
+}

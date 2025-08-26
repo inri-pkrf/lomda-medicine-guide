@@ -1,0 +1,23 @@
+.img-card-case {
+    position: absolute;
+    top: 8vh;
+    width: 5vw;
+    height: auto;
+    right: 4vw;
+}
+
+.refuaSystem {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 18vh;
+    width: 70vw;
+    z-index: 1000;
+}
+
+.buttons-bar-CardMedicine {
+    z-index: 20;
+    position: absolute;
+    top: 85vh;
+    left: 3vw;
+}

@@ -1,0 +1,79 @@
+.img-card-vest {
+    position: absolute;
+    top: 7vh;
+    width: 4vw;
+    height: auto;
+    right: 4vw;
+}
+
+.part1-palrag {
+    text-align: right;
+    font-size: 3vmin;
+    color: #000;
+    line-height: 1.7;
+    font-family: 'Assistant', sans-serif;
+    direction: rtl;
+    position: absolute;
+    top: 18vh;
+    left: 27vw;
+}
+
+.inner-list {
+    padding-right: 2.5em;
+    list-style-type: disc;
+}
+
+.mivneParlag {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 20vh;
+    width: 80vw;
+}
+
+.buttons-bar-CardParlag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 78vw;
+    position: absolute;
+    top: 85vh;
+    left: 50%;
+    transform: translateX(-50%);
+    direction: rtl;
+    z-index: 20;
+}
+
+.CardParlag .btn-text-end .img-arrow {
+    background-image: url('/public/Assets/Btns/arrowFullBlack.png');
+}
+
+.fade-palrag-text {
+  animation: fadeSlideRight 0.5s ease-in-out both;
+}
+
+.fade-palrag-image {
+  animation: fadeSlideLeft 0.5s ease-in-out both;
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

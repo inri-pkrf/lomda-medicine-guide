@@ -1,0 +1,404 @@
+.TvNafa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #4f4f4f;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+
+.screen-nafa {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: fadeIn-nafa 1s ease-out forwards;
+}
+
+
+@keyframes fadeIn-nafa {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.step-content-nafa {
+  position: absolute;
+  top: 8vh;
+  width: 80vw;
+  right: 10%;
+  height: 82vh;
+  animation: fadeIn-nafa 1s ease-out forwards;
+}
+
+
+.Tv-img-nafa {
+  position: absolute;
+  width: 85vw;
+  height: auto;
+  top: 0vh;
+  right: 50%;
+  transform: translate(50%, 0);
+  z-index: 0;
+}
+
+
+.TvNafa .buttons-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
+  position: absolute;
+  width: 74vw;
+  top: 80vh;
+  left: 13vw;
+  direction: rtl;
+  gap: 33vw;
+  z-index: 1000;
+}
+
+
+.TvNafa .btn-text {
+  display: block;
+}
+
+
+.TvNafa .text-label {
+  color: rgb(255, 255, 255);
+}
+
+
+.TvNafa .btn-text-next .img-arrow {
+  background-image: url('/public/Assets/Btns/arrowWhite.png');
+  /* למשל תמונה אחרת */
+}
+
+
+.TvNafa .btn-text-prev .img-arrow {
+  background-image: url('/public/Assets/Btns/arrowWhite.png');
+}
+
+
+.TvNafa .btn-text-end .img-arrow {
+  background-image: url('/public/Assets/Btns/arrowFullWhite.png');
+  /* תמונה אחרת */
+}
+
+
+.info-nafa {
+position: absolute;
+  margin-top: 13vh;
+    z-index: 20000;
+    right: 5vw;
+    font-size: 3vmin;
+    font-family: "Assistant";
+    color: rgb(255, 255, 255);
+    direction: rtl;
+    height: 40vh;
+    width: 50vw;
+}
+
+
+.info-nafa.with-image {
+  width: 30vw;
+  position: absolute;
+  margin-top: 21vh;
+  z-index: 20000;
+  right: 15vw;
+  font-size: 3vmin;
+  font-family: "Assistant";
+  color: rgb(255, 255, 255);
+  direction: rtl;
+  height: 40vh;
+}
+
+
+.info-nafa.with-roles {
+  position: absolute;
+  margin-top: 13vh;
+  right: 5vw;
+  font-size: 3vmin;
+  font-family: "Assistant";
+  color: rgb(255, 255, 255);
+  direction: rtl;
+  height: 4vh;
+  width: 50vw;
+}
+
+
+.info-nafa.no-image {
+  width: 70vw;
+}
+
+
+.nafa-title {
+  position: absolute;
+  margin-top: 10vh;
+  z-index: 20000;
+  right: 15vw;
+  font-size: 7vmin;
+  font-family: "Assistant";
+  color: rgb(255, 255, 255);
+  direction: rtl;
+  width: 40vw;
+  height: 40vh
+}
+
+
+.nafa-step-image {
+  position: absolute;
+  z-index: 10000;
+  width: 78VW;
+  height: auto;
+  top: 24vh;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+
+.Tv-img-nafa-0 {
+     position: absolute;
+    z-index: 10000;
+    width: 78VW;
+    height: auto;
+    top: 35vh;
+    right: 50%;
+    transform: translate(50%, 0);
+}
+
+
+.intro-buttons-group-nafa {
+  position: relative;
+  top: 46.5vh;
+  z-index: 20000;
+  right: 11vw;
+  direction: rtl;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3vw;
+}
+
+
+.intro-button-nafa {
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+  width: 9.5vw;
+  height: 6vh;
+  cursor: pointer;
+}
+
+
+.completed-nafa-btn {
+  background-color: rgba(233, 233, 233, 0.74);
+  border: none;
+  width: 9vw;
+  height: 6vh;
+  cursor: pointer;
+}
+
+
+.completed-nafa-btn:hover {
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 1);
+}
+
+
+/* כפתורי מכלולים */
+#btn-1-nafa {
+  position: absolute;
+  top:5vh;
+}
+#btn-2-nafa {
+  position: absolute;
+  right: 23vw;
+  top:5vh;
+}
+
+
+#btn-3-nafa {
+  position: absolute;
+  right: 34.4vw;
+    top:5vh;
+
+}
+
+
+#btn-4-nafa {
+  position: absolute;
+  right: 46.4vw;
+  top:5vh;
+}
+
+
+#btn-5-nafa {
+  position: absolute;
+  right: 57.5vw;
+  top:5vh;
+}
+
+
+#btn-6-nafa {
+  position: absolute;
+  right: 68.5vw;
+  top:5vh;
+}
+
+
+/* כפתורי תאים בנפה */
+.nafa-step-image.step-3 {
+  position: absolute;
+  z-index: 10000;
+  width: 30VW;
+  height: auto;
+  top: 20vh;
+  right: 66vw;
+}
+
+
+.intro-buttons-group-nafa-3 {
+  position: relative;
+  top: 20vh;
+  z-index: 20000;
+  right: 11vw;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vw;
+}
+
+
+.intro-button-nafa-3 {
+  background-color: rgba(223, 5, 5, 0);
+  border: none;
+  width: 12.8vw;
+  height: 10vh;
+  cursor: pointer;
+}
+
+
+.completed-nafa-btn-3 {
+    background-color: rgb(241 241 241 / 70%);
+    border: none;
+    width: 13.5vw;
+    height: 11vh;
+    cursor: pointer;
+}
+
+
+#btn-step3-1 {
+  position: absolute;
+right: 48.5vw;
+}
+
+
+#btn-step3-2 {
+    position: absolute;
+    top: 15vh;
+    right: 40.5vw;
+}
+
+
+#btn-step3-3 {
+position: absolute;
+    top: 15vh;
+    right: 56.6vw;
+}
+
+
+#btn-step3-4 {
+position: absolute;
+    top: 30vh;
+    right: 40.5vw;
+}
+
+
+#btn-step3-5 {
+    position: absolute;
+    top: 30.2vh;
+    right: 56.7vw;
+}
+
+
+#btn-step3-6 {
+position: absolute;
+    top: 45.5vh;
+    right: 40.5vw;
+}
+
+
+#btn-step3-7 {
+  position: absolute;
+    top: 45.5vh;
+    right: 56.7vw;
+}
+
+
+.scrollable-container-nafa {
+  height: 84vh;
+  overflow-y: auto;
+  position: absolute;
+  top: 19vh;
+  right: -6%;
+  width: 87vw;
+  overflow: hidden;
+}
+
+
+.nafa-scroll-content {
+  font-family: 'Assistant';
+  font-size: 3vmin;
+  line-height: 4vh;
+  direction: ltr;
+  text-align: center;
+  height: 50vh;
+  margin-bottom: 1vh;
+  overflow: auto;
+  margin-left: 2vw;
+  width: 75vw;
+  padding-right: 1vw;
+}
+
+
+.text-nafa-scroll {
+  color: white;
+  direction: rtl;
+  text-align: right;
+}
+
+
+.nafa-scroll-content::-webkit-scrollbar {
+  width: 10px;
+  padding-left: 5vw;
+}
+
+
+.nafa-scroll-content::-webkit-scrollbar-track {
+  background: #f0f0ef;
+  border-radius: 10px;
+}
+
+
+.nafa-scroll-content::-webkit-scrollbar-thumb {
+  background-color: #292929;
+  border-radius: 10px;
+  border: 2px solid #221500;
+}
+
+
+.nafa-scroll-content::-webkit-scrollbar-thumb:hover {
+  background-color: #a3784f;
+}
+

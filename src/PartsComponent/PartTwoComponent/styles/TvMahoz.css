@@ -1,0 +1,316 @@
+.TvMahoz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #4f4f4f;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+
+.screen-mahoz {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+@keyframes fadeIn-mahoz {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    /* מוסיף תחושת תנועה רכה */
+  }
+
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.Tv-img-mahoz {
+  position: absolute;
+  width: 85vw;
+  height: auto;
+  top: 0vh;
+  right: 50%;
+  transform: translate(50%, 0);
+  z-index: -1;
+}
+
+
+.step-content-mahoz {
+  position: absolute;
+  top: 8vh;
+  width: 80vw;
+  right: 10%;
+  height: 82vh;
+  background-color: #22150000;
+  animation: fadeIn-mahoz 1s ease-out forwards;
+}
+
+
+.TvMahoz .buttons-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
+  position: absolute;
+  width: 74vw;
+  top: 79vh;
+  left: 13vw;
+  direction: rtl;
+  gap: 8vw;
+  z-index: 1000;
+}
+
+
+.TvMahoz .btn-text {
+  display: block;
+}
+
+
+.TvMahoz .text-label {
+  color: rgb(255, 255, 255);
+}
+
+
+.TvMahoz .btn-text-next .img-arrow {
+  background-image: url('/public/Assets/Btns/arrowWhite.png');
+  /* למשל תמונה אחרת */
+}
+
+
+.TvMahoz .btn-text-prev .img-arrow {
+  background-image: url('/public/Assets/Btns/arrowWhite.png');
+}
+
+
+.TvMahoz .btn-text-end .img-arrow {
+  background-image: url('/public/Assets/Btns/arrowFullWhite.png');
+  /* תמונה אחרת */
+}
+
+
+.info-mahoz {
+  position: absolute;
+  margin-top: 13vh;
+  z-index: 20000;
+  right: 5vw;
+  font-size: 3.5vmin;
+  font-family: "Assistant";
+  color: rgb(255, 255, 255);
+  direction: rtl;
+  height: 40vh;
+}
+
+
+.info-mahoz.with-image {
+  width: 40vw;
+  height: 10vh;
+}
+
+
+.info-mahoz.no-image {
+  width: 70vw;
+}
+
+
+.info-mahoz.with-roles {
+  position: absolute;
+  margin-top: 13vh;
+  right: 5vw;
+  font-size: 3vmin;
+  font-family: "Assistant";
+  color: rgb(255, 255, 255);
+  direction: rtl;
+  height: 4vh;
+  width: 50vw;
+}
+
+
+.mahoz-title {
+  position: absolute;
+  margin-top: 10vh;
+  z-index: 20000;
+  right: 15vw;
+  font-size: 7vmin;
+  font-family: "Assistant";
+  color: rgb(255, 255, 255);
+  direction: rtl;
+  width: 40vw;
+  height: 12vh;
+}
+
+
+.mahoz-step-image {
+  position: absolute;
+  z-index: 10000;
+  width: 61VW;
+  height: auto;
+  top: 14vh;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+
+.mahoz-step-image.step-4 {
+  position: absolute;
+  z-index: 10000;
+  width: 60VW;
+  height: auto;
+  top: 15vh;
+  right: 50%;
+  transform: translate(50%, 0);
+}
+
+
+.mahoz-step-image.step-5 {
+  position: absolute;
+  z-index: 10000;
+  width: 35VW;
+  height: auto;
+  top: 25vh;
+  left: -18%;
+
+
+}
+
+
+.mahoz-step-image.step-6 {
+  position: absolute;
+  z-index: 10000;
+  width: 13VW;
+  height: auto;
+  top: 20vh;
+  left: -4%;
+}
+
+
+.mahoz-step-image.step-7 {
+  position: absolute;
+  z-index: 10000;
+  width: 22VW;
+  height: auto;
+  top: 22vh;
+  left: -9%;
+}
+
+
+.scrollable-container-mahoz {
+  height: 84vh;
+  overflow-y: auto;
+  position: absolute;
+  top: 20vh;
+  right: -7%;
+  width: 87vw;
+  overflow: hidden;
+  animation: fadeIn-mahoz 1s ease-out forwards;
+}
+
+
+.mahoz-scroll-content {
+  font-family: 'Assistant';
+  font-size: 3vmin;
+  line-height: 4vh;
+  direction: ltr;
+  text-align: center;
+  height: 50vh;
+  margin-bottom: 1vh;
+  overflow: auto;
+  margin-left: 2vw;
+  width: 75vw;
+  padding-right: 1vw;
+}
+
+
+.text-mahoz-scroll {
+  color: white;
+  direction: rtl;
+  text-align: right;
+}
+
+
+.mahoz-scroll-content::-webkit-scrollbar {
+  width: 10px;
+  padding-left: 5vw;
+}
+
+
+.mahoz-scroll-content::-webkit-scrollbar-track {
+  background: #f0f0ef;
+  border-radius: 10px;
+}
+
+
+.mahoz-scroll-content::-webkit-scrollbar-thumb {
+  background-color: #292929;
+  border-radius: 10px;
+  border: 2px solid #221500;
+}
+
+
+.mahoz-scroll-content::-webkit-scrollbar-thumb:hover {
+  background-color: #a3784f;
+}
+
+
+.subroles-list-mahoz {
+  list-style: disc;
+  padding: 0;
+  margin: 0;
+  font-family: "Assistant";
+  font-size: 3vmin;
+  color: white;
+  direction: rtl;
+  z-index: 1000;
+  position: relative;
+  top: 25vh;
+  right: 8vw;
+}
+
+
+.subroles-list-mahoz.step-5 {
+    width: 35vw;
+    top: 21vh;
+    right: -39vw;
+}
+
+
+.subroles-list-mahoz.step-6 {
+  width: 50vw;
+  right: -23vw;
+  top: 21vh;
+}
+
+
+.subroles-list-mahoz.step-7 {
+  width: 35vw;
+  right: -39vw;
+  top: 23vh;
+}
+
+
+.closeBtn-mahoz{
+
+
+position: fixed;
+    width: 2vw;
+    top: 12vh;
+    left: 13vw;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+
+
+
+
+
+

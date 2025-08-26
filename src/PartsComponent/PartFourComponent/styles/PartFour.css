@@ -1,0 +1,131 @@
+.background-part4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.tomer-back {
+    position: absolute;
+    bottom: 0vh;
+    width: 17vw;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.people-area {
+    position: absolute;
+    background-color: transparent;
+    z-index: 30;
+    cursor: pointer;
+    width: 3.5vw;
+    height: 15vh;
+}
+
+.relation-label {
+    position: absolute;
+    width: 170px;
+    height: 40px;
+    padding: 0;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 2vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Assistant', sans-serif;
+    cursor: pointer;
+}
+
+/* דוגמה למיקומים לפי הדיבים בתמונה */
+.relations1-label {
+    top: 44%;
+    left: 52.5%;
+    transform: translate(-50%, -50%);
+}
+
+.relations2-label {
+    top: 16.5%;
+    left: 53.5%;
+    transform: translate(-50%, -50%);
+}
+
+.relations3-label {
+    top: 16.5%;
+    left: 34.5%;
+    transform: translate(-50%, -50%);
+}
+
+.relations4-label {
+    top: 44%;
+    left: 34.5%;
+    transform: translate(-50%, -50%);
+}
+
+.relations5-label {
+    top: 26%;
+    left: 29.5%;
+    transform: translate(-50%, -50%);
+}
+
+.relations6-label {
+    top: 37%;
+    left: 28.5%;
+    transform: translate(-50%, -50%);
+}
+
+.relations7-label {
+    top: 26%;
+    left: 59.3%;
+    transform: translate(-50%, -50%);
+}
+
+.relations8-label {
+    top: 36.5%;
+    left: 60.5%;
+    transform: translate(-50%, -50%);
+}
+
+.mada-area {
+    right: 63.5vw;
+    top: 49vh;
+}
+
+.malka-area {
+    right: 73vw;
+    top: 59vh;
+}
+
+.mivzaim-area {
+    right: 66vw;
+    top: 51vh;
+}
+
+.shoolhan-area {
+    right: 69.5vw;
+    top: 54vh;
+}
+
+.uxluxsia-area {
+    left: 66vw;
+    top: 51vh;
+}
+
+.modain-area {
+    left: 73vw;
+    top: 59vh;
+}
+
+.tikshuv-area {
+    left: 69.5vw;
+    top: 54vh;
+}
+
+.lashcab-area {
+    left: 62.5vw;
+    top: 47vh;
+}

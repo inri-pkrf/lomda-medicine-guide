@@ -1,0 +1,58 @@
+
+.i-logo {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    width: 3%;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.i-logo:hover {
+    transform: scale(1.05);
+}
+
+.info-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.xbtn {
+    z-index: 3000;
+    width: 2vw;
+    position: absolute;
+    top: 24vh;
+    right: 69vw;
+    cursor: pointer;
+}
+
+.info-text {
+    width: 40vw;
+    height: 50vh;
+    border-radius: 3rem;
+    position: absolute;
+    bottom: 19vh;
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), inset 0 0 4px rgba(255, 255, 255, 0.5);
+    padding: 6vh 4vw;
+    direction: rtl;
+    font-size: 2.6vmin;
+    font-family: 'Assistant', sans-serif;
+    text-align: center;
+    color: #2e2e2e;
+    border: 1px solid #e0e0e0;
+    color: black;
+    transition: all 0.3s ease;
+    background-image: url("/public/Assets/intro/info-back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}

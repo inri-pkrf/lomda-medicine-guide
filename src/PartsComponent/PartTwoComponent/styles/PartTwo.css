@@ -1,0 +1,78 @@
+.PartTwo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/public/Assets/PartTwoImgs/warRoom.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.tomerThinkingPartTwo {
+    width: 25vw;
+    height: auto;
+    position: absolute;
+    margin-top: 20vh;
+    left: 71vw;
+}
+
+.nafaTvBtn {
+    margin-top: 14vh;
+    cursor: pointer;
+    right: 29vw;
+    font-size: 10vmin;
+    width: 21vw;
+    text-align: center;
+    font-family: "karantina";
+    height: 15vh;
+    position: absolute;
+    color: aliceblue;
+}
+
+.nafaTvBtn:hover {
+    transform: scale(1.2);
+}
+
+.mahozTvBtn:hover {
+    transform: scale(1.2);
+}
+
+.mahozTvBtn {
+    margin-top: 34vh;
+    cursor: pointer;
+    right: 58vw;
+    font-size: 10vmin;
+    width: 18vw;
+    text-align: center;
+    font-family: "karantina";
+    height: 12vh;
+    position: absolute;
+    color: aliceblue;
+}
+
+.completed-nafa {
+    cursor: pointer;
+    right: 29vw;
+    font-size: 10vmin;
+    width: 21vw;
+    text-align: center;
+    font-family: "karantina";
+    height: 15vh;
+    position: absolute;
+    color: rgb(102, 102, 102);
+}
+
+.completed-mahoz {
+    margin-top: 34vh;
+    cursor: pointer;
+    right: 58vw;
+    font-size: 10vmin;
+    width: 18vw;
+    text-align: center;
+    font-family: "karantina";
+    position: absolute;
+    color: rgb(102, 102, 102);
+}
