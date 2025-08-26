@@ -86,6 +86,7 @@ const IntroLomda = () => {
             {showFullScreenPrompt && (
                 <>
                     <div className="fullscreen-prompt">
+                        <p className="guide-text">* לומדה זו נועדה להיות מועברת על ידי מדריכי הקורס בלבד</p>
                         <div className="prompt-text">
                             <p>
                                 ברוכים הבאים והבאות ללומדת מכלול רפואה!<br /><br />

@@ -147,12 +147,11 @@
 }
 
 .guide-text{
-        direction: rtl;
+    direction: rtl;
     font-family: 'Assistant', sans-serif;
     font-size: 2.5vmin;
     position: absolute;
     top: 18vh;
-
 }
 
 .btn-go {
