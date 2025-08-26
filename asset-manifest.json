@@ -1,16 +1,24 @@
 {
   "files": {
-    "main.css": "/lomda-medicine-guide/static/css/main.f855e6bc.css",
-    "main.js": "/lomda-medicine-guide/static/js/main.ff807afd.js",
+    "main.css": "/lomda-medicine-guide/static/css/main.22c87152.css",
+    "main.js": "/lomda-medicine-guide/static/js/main.75561ede.js",
     "static/js/453.4c0009b5.chunk.js": "/lomda-medicine-guide/static/js/453.4c0009b5.chunk.js",
-    "static/media/logo.svg": "/lomda-medicine-guide/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/welcome-back.jpg": "/lomda-medicine-guide/static/media/welcome-back.fb7f87694282a693495f.jpg",
+    "static/media/backgound-sim.jpg": "/lomda-medicine-guide/static/media/backgound-sim.125a0398f15d398b667c.jpg",
+    "static/media/info-back.jpg": "/lomda-medicine-guide/static/media/info-back.f2488863f2976a447492.jpg",
+    "static/media/warRoom.png": "/lomda-medicine-guide/static/media/warRoom.87f47bc2dfa64286bc86.png",
+    "static/media/classroom.png": "/lomda-medicine-guide/static/media/classroom.4155f41bfd4863e78c8a.png",
+    "static/media/question-back.png": "/lomda-medicine-guide/static/media/question-back.82d2142fb5e22000271d.png",
+    "static/media/BackgroundIntro.png": "/lomda-medicine-guide/static/media/BackgroundIntro.0b7d33eba6f1a03b5ba2.png",
+    "static/media/arrowWhite.png": "/lomda-medicine-guide/static/media/arrowWhite.08f7617ccad6c0ecf523.png",
+    "static/media/arrowBlack.png": "/lomda-medicine-guide/static/media/arrowBlack.e1bcae3ab66442deab2c.png",
     "index.html": "/lomda-medicine-guide/index.html",
-    "main.f855e6bc.css.map": "/lomda-medicine-guide/static/css/main.f855e6bc.css.map",
-    "main.ff807afd.js.map": "/lomda-medicine-guide/static/js/main.ff807afd.js.map",
+    "main.22c87152.css.map": "/lomda-medicine-guide/static/css/main.22c87152.css.map",
+    "main.75561ede.js.map": "/lomda-medicine-guide/static/js/main.75561ede.js.map",
     "453.4c0009b5.chunk.js.map": "/lomda-medicine-guide/static/js/453.4c0009b5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.ff807afd.js"
+    "static/css/main.22c87152.css",
+    "static/js/main.75561ede.js"
   ]
 }
