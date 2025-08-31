@@ -12,7 +12,7 @@ const EndPage = () => {
   };
 
   const handleBackToSimulation = () => {
-    navigate('/simulation'); // חזרה לסימולציה
+    navigate('/simulation', { state: { fromEndPage: true } });
   };
 
   return (
@@ -23,7 +23,7 @@ const EndPage = () => {
       <div className="endpage-buttons">
 
         <button className="btn-endpage" onClick={handleBackToSimulation}>
-          חזרה לסימולציה
+          חזרה לבחירת סימולציה
         </button>
 
         <button className="btn-endpage" onClick={handleRestartLomda}>

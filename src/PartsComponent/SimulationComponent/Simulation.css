@@ -18,6 +18,10 @@
     margin-bottom: 1rem;
     font-family: 'Assistant', sans-serif;
     direction: rtl;
+    position: absolute;
+    top: 8vh;
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .simulation-intro-text p {
@@ -27,6 +31,112 @@
     font-family: 'Assistant', sans-serif;
     direction: rtl;
     width: 51vw;
+    position: absolute;
+    top: 18vh;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+/* גריד של כרטיסים - ממורכז באמצע העמוד */
+.simulation-selection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* מרכז את כל השורות */
+    gap: 2rem;
+    max-width: 900px;
+    margin: 3rem auto 0 auto;
+    position: relative;
+    top: 6vh;
+}
+
+
+/* מרכז את השורה האחרונה אם יש פחות מפריטים מהעמודות */
+/* .simulation-selection-grid::after {
+    content: "";
+    width: 100%;
+    grid-column: 1 / -1;
+} */
+
+
+/* כרטיס סימולציה */
+.simulation-card {
+    background-color: #f7f7f7;
+    padding: 1.2rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     height: 120px;
+    width: 230px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* אפקט הובר מודרני */
+.simulation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background-color: #e6e6e6;
+}
+
+/* כרטיס שנבחר */
+.simulation-card.selected {
+    border: 2px solid #ffcc00;
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.5);
+}
+
+/* כרטיס שמסומן כסימולציה שבוצעה */
+.simulation-card.completed {
+    background-color: #d4f1dc;
+    color: #2a6f3e;
+    opacity: 1;
+    position: relative;
+}
+
+/* סימון של ✔ לסימולציה שהושלמה */
+.simulation-card.completed::after {
+    content: "✓";
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #2a6f3e;
+}
+
+.start-simulation-button:hover {
+    background-color: #e6b800;
+}
+
+.back-to-selection-button {
+    position: absolute;
+    top: 13vh;
+    right: 1vw;
+    padding: 0.5rem 1rem;
+    color: #44475a;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 2vmin;
+    font-family: 'Assistant', sans-serif;
+}
+
+.simulation-error-message {
+    color: #ff4d4f;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    font-size: 2vmin;
+    top: 83vh;
+    right: 50%;
+    transform: translateX(50%);
+    font-family: 'Assistant', sans-serif;
 }
 
 .start-simulation-button {
@@ -45,6 +155,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    top: 13vh;
 }
 
 .start-simulation-button::before {
@@ -80,7 +191,7 @@
 .TomerPhone-sim {
     position: absolute;
     bottom: 0vh;
-    width: 29vw;
+    width: 25vw;
     height: auto;
     left: 0vw;
 }
@@ -100,10 +211,12 @@
     transform: translateX(50%);
     font-weight: bold;
     color: #333;
-    padding: 8px 16px;
     z-index: 10;
-    font-size: 6vmin;
+    font-size: 5vmin;
     font-family: "Karantina";
+    width: 80%;
+    direction: rtl;
+    text-align: center;
 }
 
 
@@ -237,7 +350,7 @@
 .expanded-box {
     background: white;
     border-radius: 16px;
-    padding: 12rem;
+    padding: 7rem;
     max-width: 70vw;
     max-height: 70vh;
     overflow-y: auto;
@@ -248,6 +361,7 @@
     line-height: 1.6;
     animation: zoomIn 0.3s ease;
     direction: rtl;
+    cursor: pointer;
 }
 
 .close-btn {
