@@ -4,11 +4,13 @@ import simulationData from '../../Data/simulationData';
 import './Simulation.css';
 import NavigationButtons from '../../genericComponent/NavigationButtons';
 
+
 const Simulation = ({ onFinishSimulation }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const chatRef = useRef(null);
   const messagesEndRef = useRef(null);
+
 
   // --- STATE ---
   const [showIntroScreen, setShowIntroScreen] = useState(() => {
@@ -16,14 +18,17 @@ const Simulation = ({ onFinishSimulation }) => {
     return started !== 'true' || location.state?.fromEndPage;
   });
 
+
   const [selectedSimulation, setSelectedSimulation] = useState(() => {
     const saved = sessionStorage.getItem('selectedSimulation');
     return saved !== null ? parseInt(saved, 10) : null;
   });
 
+
   const [simulationStarted, setSimulationStarted] = useState(() => {
     return sessionStorage.getItem('simulationStarted') === 'true';
   });
+
 
   const [currentIndex, setCurrentIndex] = useState(() => {
     const savedProgress = JSON.parse(sessionStorage.getItem('simulationProgress')) || {};
@@ -32,26 +37,32 @@ const Simulation = ({ onFinishSimulation }) => {
       : 0;
   });
 
+
   const [expandedMessage, setExpandedMessage] = useState(null);
   const [showEndButton, setShowEndButton] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+
   // --- ref לזכור אילו הודעות כבר נפתחו במודאל לכל סימולציה ---
   const openedMessagesRef = useRef({});
+
 
   // --- CURRENT SIMULATION DATA ---
   const currentSimulation =
     selectedSimulation !== null ? simulationData[selectedSimulation] : simulationData[0];
 
+
   const filteredMessages = currentSimulation.messages;
   const messagesToShow = filteredMessages.slice(0, currentIndex + 1);
   const nextMessage = filteredMessages[currentIndex + 1];
+
 
   // --- EFFECTS ---
   // גלילה לסוף הצ'אט
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [currentIndex, showIntroScreen]);
+
 
   // שמירת התקדמות בסשן לפי סימולציה
   useEffect(() => {
@@ -61,13 +72,16 @@ const Simulation = ({ onFinishSimulation }) => {
     sessionStorage.setItem('simulationProgress', JSON.stringify(progress));
   }, [currentIndex, selectedSimulation]);
 
+
   // פתיחת הודעה ראשונה אוטומטית לפי סימולציה נבחרת
   useEffect(() => {
     if (selectedSimulation === null) return;
 
+
     const sim = simulationData[selectedSimulation];
     const savedProgress = JSON.parse(sessionStorage.getItem('simulationProgress')) || {};
     const startIndex = savedProgress[selectedSimulation] || 0;
+
 
     const alreadyOpened = openedMessagesRef.current[selectedSimulation]?.includes(startIndex);
     if (!alreadyOpened) {
@@ -78,18 +92,22 @@ const Simulation = ({ onFinishSimulation }) => {
       ];
     }
 
+
     setCurrentIndex(startIndex);
   }, [selectedSimulation]);
+
 
   // הצגת כפתור סיום
   useEffect(() => {
     if (!showIntroScreen) setShowEndButton(true);
   }, [showIntroScreen]);
 
+
   // --- HANDLERS ---
   const handleBackToSelection = () => {
     setShowIntroScreen(true);
   };
+
 
   const handleSelectSimulation = idx => {
     setSelectedSimulation(idx);
@@ -98,6 +116,7 @@ const Simulation = ({ onFinishSimulation }) => {
     setSimulationStarted(false);
     setErrorMessage('');
   };
+
 
   const handleStartSimulation = () => {
     if (selectedSimulation !== null) {
@@ -111,11 +130,14 @@ const Simulation = ({ onFinishSimulation }) => {
     }
   };
 
+
   const handleNext = () => {
     const sim = currentSimulation;
 
+
     if (currentIndex < sim.messages.length - 1) {
       const newIndex = currentIndex + 1;
+
 
       // אם ההודעה הבאה עוד לא נפתחה במודאל
       const alreadyOpened = openedMessagesRef.current[selectedSimulation]?.includes(newIndex);
@@ -127,9 +149,11 @@ const Simulation = ({ onFinishSimulation }) => {
         ];
       }
 
+
       setCurrentIndex(newIndex);
     } else {
       setExpandedMessage(null);
+
 
       const doneSimulations = JSON.parse(sessionStorage.getItem('doneSimulations')) || [];
       if (!doneSimulations.includes(selectedSimulation)) {
@@ -137,13 +161,16 @@ const Simulation = ({ onFinishSimulation }) => {
         sessionStorage.setItem('doneSimulations', JSON.stringify(doneSimulations));
       }
 
+
       onFinishSimulation();
     }
   };
 
+
   const closeExpanded = () => {
     setExpandedMessage(null);
   };
+
 
   // --- JSX ---
   if (showIntroScreen) {
@@ -154,16 +181,19 @@ const Simulation = ({ onFinishSimulation }) => {
           <p>בחרו סימולציה למטה ולחצו על התחלה</p>
         </div>
 
+
         <img
           src={`${process.env.PUBLIC_URL}/Assets/Simulation/TomerSImulation.png`}
           alt="Tomer"
           className='TomerPhone-sim'
         />
 
+
         <div className="simulation-selection-grid">
           {simulationData.map((sim, idx) => {
             const doneSimulations = JSON.parse(sessionStorage.getItem('doneSimulations')) || [];
             const completed = doneSimulations.includes(idx);
+
 
             return (
               <div
@@ -177,11 +207,13 @@ const Simulation = ({ onFinishSimulation }) => {
           })}
         </div>
 
+
         {errorMessage && (
           <div className="simulation-error-message">
             {errorMessage}
           </div>
         )}
+
 
         <button className="start-simulation-button" onClick={handleStartSimulation}>
           התחלה
@@ -189,7 +221,6 @@ const Simulation = ({ onFinishSimulation }) => {
       </div>
     );
   }
-
   return (
     <div className="simulation-fullscreen">
       <button
@@ -199,7 +230,9 @@ const Simulation = ({ onFinishSimulation }) => {
         חזרה לבחירת סימולציה →
       </button>
 
+
       <div className="simulation-title">{currentSimulation.name}</div>
+
 
       <div className="chat-window" ref={chatRef}>
         {messagesToShow.map((msg, idx) => (
@@ -208,12 +241,24 @@ const Simulation = ({ onFinishSimulation }) => {
             className={`chat-message ${msg.side === 1 ? 'right' : 'left'} fade-in`}
           >
             <div className="chat-bubble">
-              <p>{msg.content}</p>
+              {/* {msg.side === 2 ? "התשובה שלכם..." : msg.content} */}
+              <p>
+                {msg.side === 2 ? (
+                  <img
+                    src={`${process.env.PUBLIC_URL}/Assets/Simulation/question-and-answer.png`}
+                    alt="תשובה"
+                    className="answer-preview-img"
+                  />
+                ) : (
+                  msg.content
+                )}
+              </p>
             </div>
           </div>
         ))}
         <div ref={messagesEndRef} />
       </div>
+
 
       <div className="chat-footer">
         {!nextMessage ? (
@@ -230,18 +275,30 @@ const Simulation = ({ onFinishSimulation }) => {
         )}
       </div>
 
+
       {expandedMessage && (
-        <div className="expanded-overlay"  onClick={closeExpanded}>
-          <div className="expanded-box">
-            <button className="close-btn" onClick={closeExpanded}>✖</button>
-            <div className="expanded-text">{expandedMessage.content}</div>
-          </div>
-        </div>
-      )}
+  <div className="expanded-overlay" onClick={closeExpanded}>
+    <div className="expanded-box">
+      <button className="close-btn" onClick={closeExpanded}>✖</button>
+      <div className="expanded-text">
+        {expandedMessage.side === 2 ? (
+          expandedMessage.content
+        ) : (
+          expandedMessage.content
+        )}
+      </div>
+    </div>
+  </div>
+)}
+
 
       <NavigationButtons showNext={!showIntroScreen} allowNext={true} simulationStarted={showEndButton} />
     </div>
   );
 };
 
+
 export default Simulation;
+
+
+

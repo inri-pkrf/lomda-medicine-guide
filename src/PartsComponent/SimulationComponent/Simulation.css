@@ -13,6 +13,7 @@
     overflow: hidden;
 }
 
+
 .simulation-intro-text h2 {
     font-size: 6vmin;
     margin-bottom: 1rem;
@@ -23,6 +24,7 @@
     right: 50%;
     transform: translateX(50%);
 }
+
 
 .simulation-intro-text p {
     font-size: 4vmin;
@@ -37,17 +39,21 @@
     transform: translateX(50%);
 }
 
+
 /* גריד של כרטיסים - ממורכז באמצע העמוד */
 .simulation-selection-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* מרכז את כל השורות */
+    justify-content: center;
+    /* מרכז את כל השורות */
     gap: 2rem;
     max-width: 900px;
     margin: 3rem auto 0 auto;
     position: relative;
     top: 6vh;
 }
+
+
 
 
 /* מרכז את השורה האחרונה אם יש פחות מפריטים מהעמודות */
@@ -58,15 +64,18 @@
 } */
 
 
+
+
 /* כרטיס סימולציה */
 .simulation-card {
     background-color: #f7f7f7;
     padding: 1.2rem;
     border-radius: 16px;
+    direction: rtl;
     display: flex;
     align-items: center;
     justify-content: center;
-     height: 120px;
+    height: 120px;
     width: 230px;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
@@ -78,6 +87,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+
 /* אפקט הובר מודרני */
 .simulation-card:hover {
     transform: translateY(-8px);
@@ -85,11 +95,13 @@
     background-color: #e6e6e6;
 }
 
+
 /* כרטיס שנבחר */
 .simulation-card.selected {
     border: 2px solid #ffcc00;
     box-shadow: 0 8px 20px rgba(255, 204, 0, 0.5);
 }
+
 
 /* כרטיס שמסומן כסימולציה שבוצעה */
 .simulation-card.completed {
@@ -98,6 +110,7 @@
     opacity: 1;
     position: relative;
 }
+
 
 /* סימון של ✔ לסימולציה שהושלמה */
 .simulation-card.completed::after {
@@ -109,9 +122,11 @@
     color: #2a6f3e;
 }
 
+
 .start-simulation-button:hover {
     background-color: #e6b800;
 }
+
 
 .back-to-selection-button {
     position: absolute;
@@ -127,6 +142,7 @@
     font-family: 'Assistant', sans-serif;
 }
 
+
 .simulation-error-message {
     color: #ff4d4f;
     font-weight: bold;
@@ -138,6 +154,7 @@
     transform: translateX(50%);
     font-family: 'Assistant', sans-serif;
 }
+
 
 .start-simulation-button {
     font-family: 'Assistant', sans-serif;
@@ -158,6 +175,7 @@
     top: 13vh;
 }
 
+
 .start-simulation-button::before {
     content: '';
     position: absolute;
@@ -173,9 +191,11 @@
     z-index: -1;
 }
 
+
 .start-simulation-button:hover::before {
     left: 125%;
 }
+
 
 .start-simulation-button:hover {
     background-color: #d33d4e;
@@ -183,10 +203,12 @@
     transform: translateY(-2px);
 }
 
+
 .start-simulation-button:active {
     transform: scale(0.98);
     box-shadow: 0 0 10px rgba(226, 81, 97, 0.4);
 }
+
 
 .TomerPhone-sim {
     position: absolute;
@@ -196,6 +218,7 @@
     left: 0vw;
 }
 
+
 .simulation-fullscreen {
     display: flex;
     flex-direction: column;
@@ -203,6 +226,7 @@
     width: 100vw;
     background-color: #f0f0f0;
 }
+
 
 .simulation-title {
     position: absolute;
@@ -218,6 +242,8 @@
     direction: rtl;
     text-align: center;
 }
+
+
 
 
 .chat-window {
@@ -236,6 +262,8 @@
 }
 
 
+
+
 .chat-footer {
     display: flex;
     align-items: center;
@@ -248,6 +276,7 @@
     transform: translateX(50%);
 }
 
+
 .chat-message {
     display: flex;
     max-width: 75%;
@@ -256,15 +285,18 @@
     animation: fadeInUp 0.4s ease-out forwards;
 }
 
+
 .chat-message.right {
     align-self: flex-end;
     justify-content: flex-end;
 }
 
+
 .chat-message.left {
     align-self: flex-start;
     justify-content: flex-start;
 }
+
 
 .chat-bubble {
     background-color: #e1f5fe;
@@ -277,9 +309,11 @@
     font-size: 2.7vmin;
 }
 
+
 .chat-message.left .chat-bubble {
     background-color: #c8e6c9;
 }
+
 
 .next-button {
     width: 48%;
@@ -305,6 +339,7 @@
     user-select: none;
 }
 
+
 .next-button:hover,
 .next-button:focus {
     background: linear-gradient(135deg, #4b5563, #374151);
@@ -315,12 +350,14 @@
     outline: none;
 }
 
+
 .next-button:active {
     transform: translateY(1px);
     box-shadow:
         0 3px 8px rgba(75, 85, 99, 0.6),
         0 0 8px rgba(107, 114, 128, 0.7);
 }
+
 
 @keyframes fadeInUp {
     to {
@@ -330,7 +367,10 @@
 }
 
 
+
+
 /* ----------------הודעה מוגדלת----------------------- */
+
 
 .expanded-overlay {
     position: fixed;
@@ -347,6 +387,7 @@
     backdrop-filter: blur(3px);
 }
 
+
 .expanded-box {
     background: white;
     border-radius: 16px;
@@ -362,7 +403,9 @@
     animation: zoomIn 0.3s ease;
     direction: rtl;
     cursor: pointer;
+    direction: rtl;
 }
+
 
 .close-btn {
     position: absolute;
@@ -376,9 +419,11 @@
     transition: transform 0.2s;
 }
 
+
 .close-btn:hover {
     transform: scale(1.2);
 }
+
 
 @keyframes zoomIn {
     from {
@@ -386,8 +431,21 @@
         opacity: 0;
     }
 
+
     to {
         transform: scale(1);
         opacity: 1;
     }
 }
+
+
+.answer-preview-img {
+    max-width: 90px;
+    height: auto;
+    display: block;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: -1vh;
+    margin-bottom: -1vh;
+}
+
