@@ -14,6 +14,7 @@
     overflow: hidden;
 }
 
+
 .Tomer-one {
     position: absolute;
     bottom: 0;
@@ -24,20 +25,24 @@
     transition: opacity 0.4s ease;
 }
 
+
 .fade-in-one {
     opacity: 1 !important;
     transition: opacity 0.5s ease;
 }
+
 
 .Tomer-one {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
+
 .PartOne .corkboard.zoomed~.Tomer-one {
     opacity: 0;
     pointer-events: none;
 }
+
 
 .corkboard {
     position: absolute;
@@ -50,6 +55,7 @@
     transition: all 0.6s ease-in-out;
 }
 
+
 .corkboard.zoomed {
     width: 85vw;
     position: absolute;
@@ -57,6 +63,7 @@
     transform: translateX(-50%);
     bottom: 0vh;
 }
+
 
 .note-wrapper {
     position: absolute;
@@ -70,19 +77,23 @@
     transition: transform 0.2s ease;
 }
 
+
 .note-wrapper.fade-in-one {
     opacity: 1;
 }
 
+
 .note-wrapper:hover {
     transform: scale(1.05);
 }
+
 
 .note-wrapper.grayscale img {
     filter: grayscale(100%);
     opacity: 0.6;
     transition: filter 0.3s ease, opacity 0.3s ease;
 }
+
 
 .note-text {
     position: absolute;
@@ -96,46 +107,55 @@
     font-family: 'Assistant', sans-serif;
 }
 
+
 #note1 {
-    top: 15vh;
-    left: 67vw;
+    top: 23vh;
+    left: 65vw;
 }
+
 
 #note2 {
     top: 15vh;
     left: 43vw;
 }
 
+
 #note3 {
-    top: 15vh;
+    top: 24vh;
     right: 65vw;
 }
 
+
 #note4 {
-     top: 54vh;
-    left: 25vw;
+    top: 53vh;
+    left: 34vw;
 }
+
 
 #note5 {
-    top: 57vh;
-    right: 20vw;
+    top: 56vh;
+    right: 33vw;
 }
 
+
 #note6 {
-  top: 47vh;
+    top: 47vh;
     left: 45vw;
 }
+
 
 #note7 {
     top: 50vh;
     left: 22vw;
 }
 
+
 .notes {
     width: 100%;
     height: auto;
     position: absolute;
 }
+
 
 .above-corkboard-box {
     position: absolute;
@@ -150,17 +170,20 @@
     animation: fade-in-one 0.4s ease-out forwards;
 }
 
+
 @keyframes fade-in-one {
     0% {
         opacity: 0;
         transform: translateX(-50%) scale(0.95);
     }
 
+
     100% {
         opacity: 1;
         transform: translateX(-50%) scale(1);
     }
 }
+
 
 .close-btn {
     position: absolute;
@@ -174,6 +197,7 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
+
 
 .blur-overlay {
     position: fixed;
@@ -191,6 +215,8 @@
     transition: opacity 0.4s ease;
 }
 
+
 .blur-overlay.active {
     opacity: 1;
 }
+

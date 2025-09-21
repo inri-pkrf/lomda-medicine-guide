@@ -150,24 +150,24 @@
 
 
 .mahoz-step-image {
-  position: absolute;
-  z-index: 10000;
-  width: 61VW;
-  height: auto;
-  top: 14vh;
-  right: 50%;
-  transform: translate(50%, 0);
+    position: absolute;
+    z-index: 10000;
+    width: 74VW;
+    height: auto;
+    top: 14vh;
+    right: 50%;
+    transform: translate(50%, 0);
 }
 
 
 .mahoz-step-image.step-4 {
-  position: absolute;
-  z-index: 10000;
-  width: 60VW;
-  height: auto;
-  top: 15vh;
-  right: 50%;
-  transform: translate(50%, 0);
+    position: absolute;
+    z-index: 10000;
+    width: 56VW;
+    height: auto;
+    top: 15vh;
+    right: 54%;
+    transform: translate(50%, 0);
 }
 
 

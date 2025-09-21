@@ -7,7 +7,7 @@
 }
 
 .part1-palrag {
-    text-align: right;
+  text-align: right;
     font-size: 3vmin;
     color: #000;
     line-height: 1.7;
@@ -15,7 +15,7 @@
     direction: rtl;
     position: absolute;
     top: 18vh;
-    left: 27vw;
+    left: 38vw;
 }
 
 .inner-list {
@@ -24,11 +24,11 @@
 }
 
 .mivneParlag {
-    position: absolute;
+ position: absolute;
     right: 50%;
     transform: translateX(50%);
-    top: 20vh;
-    width: 80vw;
+    top: 24vh;
+    width: 71vw;
 }
 
 .buttons-bar-CardParlag {

@@ -16,7 +16,7 @@ const CardMedicine = ({ onCloseCard }) => {
             </div>
 
             <img
-                src={`${process.env.PUBLIC_URL}/Assets/PartThreeImgs/refuaSystem.PNG`}
+                src={`${process.env.PUBLIC_URL}/Assets/PartThreeImgs/refuaSystem.png`}
                 alt="refuaSystem"
                 className='refuaSystem'
             />
