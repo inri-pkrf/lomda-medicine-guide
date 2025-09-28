@@ -163,10 +163,10 @@
 .mahoz-step-image.step-4 {
     position: absolute;
     z-index: 10000;
-    width: 56VW;
+    width: 46VW;
     height: auto;
-    top: 15vh;
-    right: 54%;
+    top: 9vh;
+    right: 68%;
     transform: translate(50%, 0);
 }
 
@@ -218,7 +218,7 @@
 .mahoz-scroll-content {
   font-family: 'Assistant';
   font-size: 3vmin;
-  line-height: 4vh;
+  line-height: 5vh;
   direction: ltr;
   text-align: center;
   height: 50vh;
@@ -276,25 +276,12 @@
 }
 
 
-.subroles-list-mahoz.step-5 {
-    width: 35vw;
-    top: 21vh;
-    right: -39vw;
-}
 
 
-.subroles-list-mahoz.step-6 {
-  width: 50vw;
-  right: -23vw;
-  top: 21vh;
-}
 
 
-.subroles-list-mahoz.step-7 {
-  width: 35vw;
-  right: -39vw;
-  top: 23vh;
-}
+
+
 
 
 .closeBtn-mahoz{
