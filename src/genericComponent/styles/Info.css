@@ -38,8 +38,8 @@
     border-radius: 3rem;
     position: absolute;
     bottom: 19vh;
-    right: 50%;
-    transform: translateX(50%);
+    left: 50%;
+    transform: translateX(-50%);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), inset 0 0 4px rgba(255, 255, 255, 0.5);
     padding: 6vh 4vw;
     direction: rtl;
@@ -56,3 +56,30 @@
     background-repeat: no-repeat;
     overflow: hidden;
 }
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* .pop-in {
+    animation: popIn 0.4s ease-out forwards;
+}
+
+.pop-out {
+    animation: popOut 0.4s ease-in forwards;
+} */

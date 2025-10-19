@@ -31,7 +31,7 @@
     transform: scale(1.05);
 }
 
-.info-overlay {
+/* .info-overlay {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.45);
@@ -57,24 +57,24 @@
     border-radius: 3rem;
     position: absolute;
     bottom: 19vh;
-    right: 50%;
-    transform: translateX(50%);
+    left: 50%;
+    transform: translateX(-50%);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), inset 0 0 4px rgba(255, 255, 255, 0.5);
     padding: 6vh 4vw;
     direction: rtl;
     font-size: 2.6vmin;
     font-family: 'Assistant', sans-serif;
     text-align: center;
-    color: #2e2e2e;
-    border: 1px solid #e0e0e0;
     color: black;
+    border: 1px solid #e0e0e0;
     transition: all 0.3s ease;
     background-image: url("/public/Assets/intro/info-back.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-}
+} */
+
 
 @keyframes fadeIn {
     0% {
@@ -104,37 +104,7 @@
     animation: fadeOut 0.4s ease-in forwards;
 }
 
-@keyframes popIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.85) translateX(50%);
-    }
 
-    100% {
-        opacity: 1;
-        transform: scale(1) translateX(50%);
-    }
-}
-
-@keyframes popOut {
-    0% {
-        opacity: 1;
-        transform: scale(1) translateX(50%);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(0.85) translateX(50%);
-    }
-}
-
-.pop-in {
-    animation: popIn 0.4s ease-out forwards;
-}
-
-.pop-out {
-    animation: popOut 0.4s ease-in forwards;
-}
 
 .prompt-text {
     direction: rtl;
@@ -144,14 +114,6 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     font-size: 5.5vmin;
     color: black;
-}
-
-.guide-text{
-    direction: rtl;
-    font-family: 'Assistant', sans-serif;
-    font-size: 2.5vmin;
-    position: absolute;
-    top: 18vh;
 }
 
 .btn-go {
